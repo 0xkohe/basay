@@ -52,7 +52,7 @@ func chatRoast(ctx context.Context, key, prompt string) (string, error) {
 			openai.SystemMessage(`あなたは辛辣な日本語芸人です。渡された文章を一言の暴言に変換してください（意味は保持）`),
 			openai.UserMessage(prompt),
 		},
-		MaxTokens: openai.Int(120),
+		MaxTokens: openai.Int(1200),
 	})
 	if err != nil {
 		return "", err
